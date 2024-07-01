@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Setup - Step 3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #fff;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .step h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .step p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .payment-option:hover {
+            background-color: #f0f0f0;
+        }
+        .payment-option img {
+            height: 24px;
+        }
+        .signout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="signout">Sign Out</a>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" height="50">
+        </div>
+        <div class="step">
+            <h1>Choose how to pay</h1>
+            <p>Your payment is encrypted and you can change your payment method at anytime.<br>
+            Secure for peace of mind.<br>
+            Cancel easily online.</p>
+        </div>
+        <div class="payment-option" onclick="selectPayment('credit-card')">
+            <span>Credit or Debit Card</span>
+            <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+            <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
+            <img src="https://img.icons8.com/color/48/000000/maestro.png" alt="Maestro">
+        </div>
+        <div class="payment-option" onclick="selectPayment('upi')">
+            <span>UPI AutoPay</span>
+            <img src="https://img.icons8.com/color/48/000000/bhim.png" alt="BHIM">
+            <img src="https://img.icons8.com/color/48/000000/paytm.png" alt="Paytm">
+            <img src="https://img.icons8.com/color/48/000000/amazon.png" alt="Amazon Pay">
+            <img src="https://img.icons8.com/color/48/000000/google-pay-india.png" alt="Google Pay">
+        </div>
+    </div>
+    <script>
+        function selectPayment(method) {
+            alert('Payment method selected: ' + method);
+            // Implement the next steps for the payment method selection
+            // For example, redirect to a payment processing page or display a confirmation message
+        }
+    </script>
+</body>
+</html>
